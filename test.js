@@ -49,18 +49,16 @@ let testString = "Yummy"
 //         }
 //     }
 // }
-
-const translate = (array) => {
-    let arraySplit = array.split('')
-    
-    let vowel = word.indexOf(firstMatch[0]);
-    let firstMatch = array.match(/[aeiou]/g).map(value => value.substring(vowel) + value.substring(0, vowel) + "ay") || 0;
-    
-    let pigLatinOutput = '';
-
-
-
 let testarr = "Hello apple yummy tacos"
+
+const translate = (string) => {
+    let arraySplit = string.split('')
+    let firstMatch = arraySplit.match(/[aeiou]/).map(value => value.substring(vowel) + value.substring(0, vowel) + "ay") || 0;
+    let vowel = string.indexOf(firstMatch[0]);
+
+    return firstMatch
+}
+
 console.log(translate(testarr))
 
 // translate("apple");
