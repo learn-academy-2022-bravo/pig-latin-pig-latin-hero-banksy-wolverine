@@ -29,44 +29,36 @@ class App extends Component {
       // ACTION ITEM: use "currentWord" as a starting point for your code
       console.log("currentWord:", currentWord)
 
-      let vowelsArray = currentWord.split("").filter(vowel => {
-        return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
-      })
-      console.log("vowelsArray:", vowelsArray)
+      // let vowelsArray = currentWord.split("").filter(vowel => {
+      //   return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
+      // })
+      // console.log("vowelsArray:", vowelsArray)
 
-      // your code here!
-      const pigLatinNato = if (vowelsArray.indexOf(message[i]) !== -1) break;
-          // else if(message.slice(i, i+2) === 'qu') i += 1;
-        }
-        return message.slice(i) + message.slice(0, i) + 'ay';
+      // const pigLatinNator = () => {
+      //   for (var i=0; i < userInput.length; i++)
+      //   if (vowelsArray.indexOf(currentWord[i]) !== -1){
+      //     return userInput.slice(i) + userInput.slice(0, i) + 'ay'
+      //   } 
+      
+      // const translate = () => {
+      //   return currentWord().map(pigLatinNator)}
+      
+      // let newCurrentWord = pigLatinNator(translate())
+        
+        // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
+        return currentWord})
+    
+        // joining the array back to a string of translated words
+        // no need to change this variable
+        let translatedWords = translatedWordsArray.join(" ")
+        console.log("translatedWords:", translatedWords)
+        
+        // the setState method will take your information from "translatedWords" and update the state object that is displayed to the user
+        // no need to change this method
+        this.setState({phraseTranslated: translatedWords})
       }
 
-
-      const
-      if(vowelsArray.indexOf(userInput[i]) !== -1)
-      if(userInput.slice(i, i+2) === 'qu') i += 1;
-        return userInput.slice(i) + userInput.slice(0, i) + 'ay';
-
-
-      // Remember: console.log is your friend :)
-      let newCurrentWord
-
-      // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
-      return currentWord
-    })
-
-
-    // joining the array back to a string of translated words
-    // no need to change this variable
-    let translatedWords = translatedWordsArray.join(" ")
-    console.log("translatedWords:", translatedWords)
-
-    // the setState method will take your information from "translatedWords" and update the state object that is displayed to the user
-    // no need to change this method
-    this.setState({phraseTranslated: translatedWords})
-  }
-
-  restartGame = () => {
+      restartGame = () => {
     // this method restarts the game by setting the original state
     // ACTION ITEM: when you are ready for your full user experience, delete the test words in phrase so that is assigned an empty string
     this.setState({
@@ -88,7 +80,7 @@ class App extends Component {
     this.setState({phrase: e.target.value})
   }
 
-  render() {
+  render(){
     return (
       <>
         <h1>Pig Latin Translator</h1>
