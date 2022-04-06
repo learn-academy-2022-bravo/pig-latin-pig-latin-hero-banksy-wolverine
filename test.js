@@ -27,29 +27,52 @@ let testString = "Yummy"
 //     return pigLatin.join(" ");
 //   }
 
-var translate = function(word) {
-    var array = word.split('');
-
-    let firstMatch = word.match(/[aeiou]/g) || 0;
-    let vowel = word.indexOf(firstMatch[0]);
-    newStr = word.substring(vowel) + word.substring(0, vowel) + "ay";
+// var translate = function(word) {
+//     var array = word.split('');
+//     let vowels = ["a", "e", "i", "o", "u"]
+//     let firstMatch = word.match(/[aeiou]/g) || 0;
+//     let vowel = word.indexOf(firstMatch[0]);
+//     newStr = word.substring(vowel) + word.substring(0, vowel) + "ay";
     
-    var newWord = '';
-    for(var i = 0; i < vowels.length-1; i++) {
-        for(var y = 0; y < word.length-1; y++) {
-            if(word[y] === vowels[i]) {
-                for(var x = y; x < word.length; x++){
-                    newWord = newWord + word[x];
-                }
-                for(var n = 0; n < y; n++){ 
-                    newWord = newWord + word[n];
-                }
-                return newWord + "ay";
-            }       
-        }
-    }
-}
+//     var newWord = '';
+//     for(var i = 0; i < vowels.length-1; i++) {
+//         for(var y = 0; y < word.length-1; y++) {
+//             if(word[y] === vowels[i]) {
+//                 for(var x = y; x < word.length; x++){
+//                     newWord = newWord + word[x];
+//                 }
+//                 for(var n = 0; n < y; n++){ 
+//                     newWord = newWord + word[n];
+//                 }
+//                 return newWord + "ay";
+//             }       
+//         }
+//     }
+// }
 
-translate("apple");
-  console.log (translate("yummy"))
+const translate = (array) => {
+    let arraySplit = array.split('')
+    
+    let vowel = word.indexOf(firstMatch[0]);
+    let firstMatch = array.match(/[aeiou]/g).map(value => value.substring(vowel) + value.substring(0, vowel) + "ay") || 0;
+    
+    let pigLatinOutput = '';
 
+
+
+let testarr = "Hello apple yummy tacos"
+console.log(translate(testarr))
+
+// translate("apple");
+//   console.log (translate(""))
+
+
+
+//   function(array) ={
+//       .split, 
+//       .match[vowels],
+//       .substring at 1st vowel index, return 1st vowel to end of string
+//         add +ay or +way (if it the new words first letter = vowel)
+//       join array as new string
+//       return as translated Pig Latin
+//   }
