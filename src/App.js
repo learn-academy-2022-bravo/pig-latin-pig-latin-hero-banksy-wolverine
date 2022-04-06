@@ -9,7 +9,8 @@ class App extends Component {
     this.state = {
       // "phrase" is the text entered by the user - right now there are test words hard coded to make the process of testing your code faster and easier
       // ACTION ITEM: when you are ready for your full user experience, delete the test words so phrase is assigned an empty string
-      phrase: "alpha through yummy squeal queen fry",
+      // phrase: "alpha through yummy squeal queen fry",
+      phrase: "",
       // "phraseTranslated" is what the user will see appear on the page as Pig Latin, it starts as the preset message and updates when your user clicks the "submit" button
       phraseTranslated: "This is where your translated sentence will appear."
     }
@@ -34,9 +35,21 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+      const pigLatinNato = if (vowelsArray.indexOf(message[i]) !== -1) break;
+          // else if(message.slice(i, i+2) === 'qu') i += 1;
+        }
+        return message.slice(i) + message.slice(0, i) + 'ay';
+      }
+
+
+      const
+      if(vowelsArray.indexOf(userInput[i]) !== -1)
+      if(userInput.slice(i, i+2) === 'qu') i += 1;
+        return userInput.slice(i) + userInput.slice(0, i) + 'ay';
+
 
       // Remember: console.log is your friend :)
-
+      let newCurrentWord
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
       return currentWord
